@@ -1,8 +1,17 @@
 package com.pluralsigth.gempresarial.models;
 
-public abstract class EntityBase {
-	public int ID;
+import java.util.AbstractCollection;
+import java.util.AbstractList;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+@XmlRootElement
+public abstract class EntityBase<T> {
+	private int ID;
+	
+	@XmlElement(nillable=true)
 	public int getID() {
 		return ID;
 	}
@@ -10,4 +19,5 @@ public abstract class EntityBase {
 	public void setID(int iD) {
 		ID = iD;
 	}
+
 }

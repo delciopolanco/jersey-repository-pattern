@@ -1,11 +1,11 @@
 package com.pluralsigth.gempresarial.repository;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.pluralsigth.gempresarial.models.EntityBase;
 
-public interface IRepository<T extends EntityBase> {
-	ArrayList<T> Get();
+public interface IRepository<T extends EntityBase<?>> {
+	List<T> Get();
 	T GetById(int id);
     void Add(T entity);
     void Delete(T entity);
